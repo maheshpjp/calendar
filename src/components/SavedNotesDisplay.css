@@ -1,0 +1,267 @@
+.saved-notes-display {
+  background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8), inset 0 1px 0 rgba(212, 175, 55, 0.2);
+  transition: all 0.4s ease;
+  margin-top: 1rem;
+  height: 47.5rem;
+}
+
+.saved-notes-title {
+  margin: 0 0 1.5rem 0;
+  color: #d4af37;
+  font-family: 'Trajan Pro', 'Cormorant Garamond', 'Georgia', serif;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.4);
+}
+
+.notes-cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  max-height: 600px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 0.5rem;
+}
+
+/* Custom Scrollbar Styling */
+.notes-cards-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.notes-cards-container::-webkit-scrollbar-track {
+  background: rgba(212, 175, 55, 0.1);
+  border-radius: 10px;
+}
+
+.notes-cards-container::-webkit-scrollbar-thumb {
+  background: rgba(212, 175, 55, 0.4);
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+.notes-cards-container::-webkit-scrollbar-thumb:hover {
+  background: rgba(212, 175, 55, 0.6);
+}
+
+.note-card {
+  background: rgba(212, 175, 55, 0.1);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 6px;
+  padding: 1.25rem;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.note-card:hover {
+  background: rgba(212, 175, 55, 0.15);
+  box-shadow: 0 8px 20px rgba(212, 175, 55, 0.25);
+  transform: translateY(-4px);
+  border-color: rgba(212, 175, 55, 0.6);
+}
+
+.note-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  flex: 1;
+}
+
+.note-date-header {
+  color: #d4af37;
+  font-weight: bold;
+  font-family: 'Cormorant Garamond', 'Georgia', serif;
+  font-size: 1.2rem;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+
+.note-text {
+  color: #bbb;
+  font-family: 'Libre Baskerville', 'Georgia', serif;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  word-wrap: break-word;
+}
+
+.delete-btn {
+  background: none;
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  color: #d4af37;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+  padding: 0;
+}
+
+.delete-btn:hover {
+  background: #d4af37;
+  color: #000;
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.4);
+}
+
+.delete-btn:active {
+  transform: scale(0.95);
+}
+
+/* Empty Notes Message */
+.empty-notes-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  text-align: center;
+  padding: 2rem;
+}
+
+.empty-notes-message p {
+  margin: 0;
+  color: #999;
+  font-family: 'Cormorant Garamond', 'Georgia', serif;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+  font-style: italic;
+}
+
+/* Light Theme */
+.app.light .saved-notes-display {
+  background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%);
+  border: 2px solid #d4af37;
+}
+
+.app.light .saved-notes-display .saved-notes-title {
+  color: #1a1a1a;
+  border-bottom: 2px solid #d4af37;
+}
+
+.app.light .note-card {
+  background: rgba(212, 175, 55, 0.08);
+  border: 1px solid #d4af37;
+  color: #333;
+}
+
+.app.light .note-card:hover {
+  background: rgba(212, 175, 55, 0.12);
+}
+
+.app.light .note-date-header {
+  color: #8b6914;
+}
+
+.app.light .note-text {
+  color: #444;
+}
+
+.app.light .delete-btn {
+  border-color: #d4af37;
+  color: #8b6914;
+}
+
+.app.light .delete-btn:hover {
+  background: #d4af37;
+  color: #fff;
+}
+
+/* Light Theme Scrollbar */
+.app.light .notes-cards-container::-webkit-scrollbar-track {
+  background: rgba(212, 175, 55, 0.08);
+}
+
+.app.light .notes-cards-container::-webkit-scrollbar-thumb {
+  background: rgba(212, 175, 55, 0.5);
+}
+
+.app.light .notes-cards-container::-webkit-scrollbar-thumb:hover {
+  background: rgba(212, 175, 55, 0.7);
+}
+
+.app.light .empty-notes-message p {
+  color: #999;
+}
+
+@media (max-width: 768px) {
+  .saved-notes-display {
+    padding: 1rem;
+    margin-top: 1rem;
+  }
+
+  .saved-notes-title {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+
+  .notes-cards-container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .note-card {
+    padding: 1rem;
+  }
+
+  .note-date-header {
+    font-size: 0.85rem;
+  }
+
+  .note-text {
+    font-size: 0.9rem;
+  }
+
+  .delete-btn {
+    width: 28px;
+    height: 28px;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .saved-notes-display {
+    padding: 0.75rem;
+    margin-top: 0.75rem;
+  }
+
+  .saved-notes-title {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+
+  .note-card {
+    padding: 0.75rem;
+    gap: 0.5rem;
+  }
+
+  .note-date-header {
+    font-size: 0.8rem;
+  }
+
+  .note-text {
+    font-size: 0.85rem;
+  }
+
+  .delete-btn {
+    width: 24px;
+    height: 24px;
+    font-size: 1rem;
+  }
+}

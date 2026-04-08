@@ -1,0 +1,47 @@
+.calendar-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0 1.5rem 1.5rem 1.5rem;
+}
+
+.day-names {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.day-name {
+  text-align: center;
+  padding: 0.75rem 0;
+  color: #d4af37;
+  font-family: 'Cormorant Garamond', 'Georgia', serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  border-bottom: 1px solid #d4af37;
+}
+
+.days-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .day-names {
+    gap: 0.25rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .day-name {
+    padding: 0.5rem 0;
+    font-size: 0.75rem;
+  }
+
+  .days-grid {
+    gap: 0.25rem;
+  }
+}
